@@ -1,0 +1,37 @@
+1005: Another A+B Problem
+
+Time Limit: 2000 ms    Memory Limit: 10000 kB   
+Judge type: Multi-cases
+Total Submit : 1868 (1157 users)   Accepted Submit : 1311 (1130 users)   Page View : 10752 
+Font Style: Aa Aa Aa
+Calculate A+B
+
+Input
+
+Input consists of a pair of integers A and B,separated by a space.
+Output
+
+Output a single integer : sum of A and B.
+Sample Input
+
+1 2
+Sample Output
+
+3
+Hint
+
+
+C++ Sample
+
+#include <iostream>
+using namespace std;
+int main()
+{
+int a,b;
+cin>>a>>b;
+cout<<a+b<<endl;
+return 0;
+}
+Source
+
+Nankai Online Judge
