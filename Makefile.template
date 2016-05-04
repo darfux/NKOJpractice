@@ -1,3 +1,10 @@
+SHELL:=/bin/bash
+
 all:
-	g++ -pipe -Wall -g -rdynamic -fmax-errors=5 -o main.out main.cpp
-	./main.out
+	g++ -pipe -Wall -g -rdynamic -fmax-errors=5 -o main.out main.cpp;
+	@if [ -a input ] ; \
+	then \
+		./main.out < input; \
+	else \
+		./main.out; \
+	fi;
