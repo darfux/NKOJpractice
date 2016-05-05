@@ -1,0 +1,28 @@
+ 1007: 分解数
+
+Time Limit: 1500 ms    Memory Limit: 10000 kB   
+Judge type: Multi-cases Special Judge
+Total Submit : 1085 (506 users)   Accepted Submit : 602 (467 users)   Page View : 11279 
+Font Style: Aa Aa Aa
+把一个给定的整数分解成若干个素数的和。
+Input
+
+一个数。(32位无符号整型数范围内。)
+
+Output
+
+一些素数。
+
+Sample Input
+
+9
+Sample Output
+
+3 3 3
+Hint
+
+SP_JUDGE.
+2007.3.29 testdata updated.
+Source
+
+wy
