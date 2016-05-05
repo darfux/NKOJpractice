@@ -6,27 +6,18 @@ int main(int argc, char const *argv[])
 	uint32_t n;
 	scanf("%u", &n);
 
-	int factors[512];
-
-	int idx = 0;
-
-	for (uint32_t i = 2; i <= n; ++i)
+	while(n>3)
 	{
-		while(n != i)
+		if((n&1)==1)
 		{
-			if(n%i == 0)
-			{
-				factors[idx++] = i;
-				n /= i;
-			}
-			else { break; }
+			printf("3 ");
+			n-=3;
 		}
-	}
-
-	printf("%d\n", idx);
-	for (int i = 0; i < idx; ++i)
-	{
-		printf("%d ", factors[i]);
+		else
+		{
+			printf("2 ");
+			n-=2;
+		}
 	}
 	printf("%d", n);
 
