@@ -1,3 +1,3 @@
-MAKE_TEMPLATE = ../Makefile.template
+MAKE_TEMPLATE = PARENT/Makefile.template
 
 include $(MAKE_TEMPLATE)

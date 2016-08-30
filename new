@@ -1,22 +1,32 @@
 #!/bin/bash
 
+check_problem(){
+	if [[ -d ./$1 ]]; then
+		echo "Problem existed!"
+		exit 1
+	fi
+}
+
+
 if [[ -z $1 ]]; then
 	echo "Please enter problem number:"
 	read num
 else
-	num=$1
+	if [[ $1 -eq 'c' ]]; then
+		name=$2
+		path=company/$name
+		check_problem $path
+		cp -r ./template ./$path
+		sed  -i "s/PARENT/\.\.\/\.\./" ./$path/Makefile
+		sed  -i "s/PARENT/\.\.\/\.\./" ./$path/checker.rb
+	else
+		num=$1
+		path=$num
+		check_problem $path
+		cp -r ./template ./$num
+		sed  -i "s/PARENT/\.\./" ./$path/Makefile
+		sed  -i "s/PARENT/\.\./" ./$path/checker.rb
+	fi
 fi
-
-if [[ -d ./$num ]]; then
-	echo "Problem existed!"
-	exit 1
-fi
-
-cp -r ./template ./$num
-
-cd ./$num
-printf "\n//====Comments====\\\\\n" > ./problem
-touch ./input
-
 
 

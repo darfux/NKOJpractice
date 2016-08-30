@@ -1,10 +1,20 @@
 SHELL:=/bin/bash
 
-all:
-	g++ -pipe -Wall -g -rdynamic -fmax-errors=5 -o main.out main.cpp;
+all: main.out
 	@if [ -a input ] ; \
 	then \
 		./main.out < input; \
 	else \
 		./main.out; \
 	fi;
+
+main.out:
+	g++ -pipe -Wall -g -rdynamic -fmax-errors=5 -o main.out main.cpp;	
+
+
+
+check: main.out
+	ruby checker.rb
+
+clean:
+	rm -f main.out
